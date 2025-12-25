@@ -1,0 +1,51 @@
+# ============================================================
+# MRD Agent - Dependencies
+# ============================================================
+# Each dependency is intentionally selected for a specific purpose.
+# No bloat, no unused packages.
+# ============================================================
+
+# --- Core LLM & Orchestration ---
+# LangGraph: State machine orchestration (per Figma MRD-V4 spec)
+langgraph>=0.2.0
+
+# LangChain: Foundation for LangGraph nodes and tools
+langchain>=0.1.0
+langchain-openai>=0.1.0
+
+# OpenAI: Primary LLM (GPT-4o for reasoning)
+openai>=1.0.0
+
+# --- Structured Output & Validation ---
+# Pydantic: Type-safe models for MRD output (Task 4 requirement)
+pydantic>=2.5.0
+
+# Instructor: Forces LLM to output valid Pydantic models
+instructor>=1.0.0
+
+# --- Research Tools ---
+# Firecrawl: Web scraping for official websites
+firecrawl-py>=0.0.16
+
+# Tavily: RAG-optimized web search
+tavily-python>=0.3.0
+
+# --- API & Web Server ---
+# FastAPI: Backend API server
+fastapi>=0.109.0
+uvicorn>=0.27.0
+
+# --- Async & HTTP ---
+# HTTPX: Async HTTP client for API calls
+httpx>=0.26.0
+
+# --- Utilities ---
+# Python-dotenv: Load .env file for API keys
+python-dotenv>=1.0.0
+
+# Rich: Beautiful terminal output for HITL prompts
+rich>=13.0.0
+
+# --- Report Generation ---
+markdown>=3.5.0
+xhtml2pdf>=0.2.14

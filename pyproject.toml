@@ -1,0 +1,66 @@
+# ============================================================
+# MRD Agent - Project Configuration
+# ============================================================
+# Autonomous Product Strategy Agent for Market Requirements Documents
+# Focus: Real-money Skill Gaming (Triumph vs Skillz analysis)
+# ============================================================
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mrd-agent"
+version = "2.0.0"
+description = "Autonomous MRD Agent - Structured agentic reasoning for market research"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+
+authors = [
+    {name = "MRD Agent Team"}
+]
+
+keywords = [
+    "langgraph",
+    "pydantic",
+    "mrd",
+    "market-research",
+    "autonomous-agent",
+    "skill-gaming"
+]
+
+dependencies = [
+    "langgraph>=0.2.0",
+    "langchain>=0.1.0",
+    "langchain-openai>=0.1.0",
+    "openai>=1.0.0",
+    "pydantic>=2.5.0",
+    "instructor>=1.0.0",
+    "firecrawl-py>=0.0.16",
+    "tavily-python>=0.3.0",
+    "fastapi>=0.109.0",
+    "uvicorn>=0.27.0",
+    "httpx>=0.26.0",
+    "python-dotenv>=1.0.0",
+    "rich>=13.0.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "black>=23.0.0",
+    "ruff>=0.1.0"
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*", "api*"]
+
+[tool.black]
+line-length = 100
+target-version = ["py310"]
+
+[tool.ruff]
+line-length = 100
+select = ["E", "F", "I"]
